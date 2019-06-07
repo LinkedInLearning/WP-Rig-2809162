@@ -20,6 +20,7 @@ use function wp_localize_script;
 use function get_the_ID;
 use function rest_url;
 use function esc_html__;
+use function add_image_size;
 
 /**
  * Class for related posts.
@@ -45,6 +46,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 */
 	public function initialize() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'action_enqueue_related_posts_script' ) );
+		add_action( 'after_setup_theme', array( $this, 'action_add_image_sizes' ) );
 	}
 
 	/**
@@ -58,6 +60,13 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		return array(
 			'display_related_posts' => array( $this, 'display_related_posts' ),
 		);
+	}
+
+	/**
+	 * Add custom image size.
+	 */
+	public function action_add_image_sizes() {
+		add_image_size( 'wpRigRelated', 720, 460, true );
 	}
 
 	/**
