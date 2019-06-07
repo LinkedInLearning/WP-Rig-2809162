@@ -1,0 +1,61 @@
+/* Styles for Related Posts feature. */
+
+.related-spinner {
+	margin: auto;
+	width: 3rem;
+	height: 3rem;
+	border: 6px solid var(--color-theme-light-grey);
+	border-top: 6px solid var(--color-theme-primary);
+	border-radius: 100%;
+	animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.related-posts {
+	display: flex;
+	margin: 2rem;
+}
+
+.related-post {
+	position: relative;
+	display: flex;
+	align-items: stretch;
+	flex: 1 1 0;
+	padding: 0 1rem;
+	max-width: 50%;
+}
+
+.related-posts a {
+	padding: 2rem;
+	width: 100%;
+	color: var(--global-font-color);
+	text-decoration: none;
+	border: 1px solid var(--color-theme-white);
+	transition: all 0.2s;
+}
+
+.related-post a:focus,
+.related-post a:hover {
+	margin: -4px 0 0 -4px;
+	border-color: var(--color-theme-grey);
+	box-shadow: 8px 8px 0 var(--color-theme-grey);
+}
+
+.related-post a:focus > .related-post__title,
+.related-post a:hover > .related-post__title {
+	text-decoration: underline;
+}
+
+.related-post__image {
+	margin: -2rem -2rem 0;
+}
