@@ -1,0 +1,39 @@
+{
+  "name": "wprig/wprig",
+  "description": "A progressive theme development rig for WordPress.",
+  "type": "wordpress-theme",
+  "license": "GPL-2.0",
+  "require-dev": {
+    "php": ">=7.0",
+    "wp-coding-standards/wpcs": "^2",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.4",
+    "phpunit/phpunit": "^6",
+    "brain/monkey": "^2",
+    "phpcompatibility/php-compatibility": "^9"
+  },
+  "config": {
+    "platform": {
+      "php": "7.0"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "WP_Rig\\WP_Rig\\": "inc"
+    }
+  },
+  "scripts": {
+    "install-codestandards": [
+      "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run"
+    ],
+    "phpcbf-dev": "\"vendor/bin/phpcbf\"",
+    "run-phpcbf": [
+      "@phpcbf-dev"
+    ],
+    "phpcs-dev": "\"vendor/bin/phpcs\"",
+    "run-phpcs": [
+      "@phpcs-dev"
+    ],
+    "phpunit-dev": "\"vendor/bin/phpunit\"",
+    "phpunit-integration-dev": "\"vendor/bin/phpunit\" -c \"phpunit.integration.xml.dist\""
+  }
+}
