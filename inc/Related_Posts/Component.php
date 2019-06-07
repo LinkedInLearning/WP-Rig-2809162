@@ -12,12 +12,14 @@ use WP_Rig\WP_Rig\Templating_Component_Interface;
 use function WP_Rig\WP_Rig\wp_rig;
 use function get_the_category;
 use function add_action;
-use function add_filter;
 use function wp_enqueue_script;
 use function get_theme_file_uri;
 use function get_theme_file_path;
 use function wp_script_add_data;
 use function wp_localize_script;
+use function get_the_ID;
+use function rest_url;
+use function esc_html__;
 
 /**
  * Class for related posts.
@@ -111,7 +113,13 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 * Display the related posts.
 	 */
 	public function display_related_posts() {
-		echo '<h2>New Related Posts:</h2>';
+		printf(
+			'<h2 class="related-header">%s</h2>
+			 <aside class="related-posts alignfull">
+				<div class="related-spinner"></div>
+			 </aside>',
+			esc_html( 'Related posts:', 'wp-rig' )
+		);
 	}
 
 }
