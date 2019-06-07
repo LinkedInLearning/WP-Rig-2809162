@@ -9,6 +9,7 @@ namespace WP_Rig\WP_Rig\Related_Posts;
 
 use WP_Rig\WP_Rig\Component_Interface;
 use WP_Rig\WP_Rig\Templating_Component_Interface;
+use function get_the_category;
 
 
 /**
@@ -48,6 +49,22 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		return array(
 			'display_related_posts' => array( $this, 'display_related_posts' ),
 		);
+	}
+
+	/**
+	 * Return comma-separated list of current post category IDs.
+	 */
+	public function get_post_category_ids() {
+		$categories = get_the_category();
+		$cat_ids = [];
+
+		if ( ! empty( $categories ) ) {
+			foreach ( $categories as $category ) {
+				$cat_ids[] = $category->cat_ID;
+			}
+		}
+
+		return implode( ',', $cat_ids );
 	}
 
 	/**
