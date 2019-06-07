@@ -7,6 +7,4 @@
 
 namespace WP_Rig\WP_Rig;
 
-?>
-
-<h2>Related Posts</h2>
+wp_rig()->display_related_posts();
