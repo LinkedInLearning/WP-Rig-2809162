@@ -9,4 +9,4 @@ namespace WP_Rig\WP_Rig;
 
 ?>
 
-<h2>Related Posts</h2>
+<h2>Related Posts:</h2>
