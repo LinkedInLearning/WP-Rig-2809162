@@ -1,6 +1,19 @@
 # WordPress: Building Progressive Themes with WP Rig
+This is the repository for the LinkedIn Learning course WordPress: Building Progressive Themes with WP Rig. The full course is available from [LinkedIn Learning][lil-course-url].
 
-This is the repository for the LinkedIn Learning course [WordPress: Building Progressive Themes with WP Rig](https://linkedin.com/learning). The full course is available from [LinkedIn Learning](https://linkedin.com/learning).
+![WordPress: Building Progressive Themes with WP Rig][lil-thumbnail-url] 
+WP Rig, a new toolkit, makes building progressive themes in WordPress easy. It ships with a fully styled starter theme that can be easily customized, and it lints, optimizes, and minifies your changes as you code, making your themes as fast and performant as possible. In this course, instructor Morten Rand-Henriksen shows how to install and configure WP Rig and build a new progressive theme right out of the box. Learn how to edit the underlying CSS, PHP, and JavaScript code and add advanced features such as widgets, custom menus, backgrounds, and logos. Watch a practical example of how to extend WP Rig. Plus, see demonstrations of how to add a footer widget, build a basic component, and export a theme.
+
+### Learning objectives
+- Setting up a WordPress theme development environment
+- Installing WP Rig
+- Building, activating, and testing a new progressive theme
+- Editing CSS
+- Using web fonts
+- Editing existing templates
+- Editing PHP and JavaScript code
+- Adding advanced features
+- Translating a theme
 
 ## Instructions
 
@@ -29,3 +42,14 @@ Some branches will have a beginning and an end state. These are marked with the 
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/itemdetails?itemName=esbenp.prettier-vscode)
 - [stylelint](https://marketplace.visualstudio.com/itemdetails?itemName=shinnn.stylelint)
 
+
+### Instructor
+
+**Morten Rand-Hendriksen**
+
+_Web Designer and Developer_
+
+[Other courses by the instructor](https://www.linkedin.com/learning/instructors/morten-rand-hendriksen?u=104)
+
+[lil-course-url]: https://www.linkedin.com/learning/web-portfolio-projects-api-based-chrome-developer-tool
+[lil-thumbnail-url]: https://cdn.lynda.com/course/2809162/2809162-1563296193231-16x9.jpg
